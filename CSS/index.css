@@ -35,6 +35,11 @@
   margin: 0;
   font-size: 48px;
 }
+@media (max-width: 650px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}
 .menu-button {
   position: absolute;
   left: 20px;
@@ -69,14 +74,14 @@
 }
 .article {
   margin: 20px 10%;
-  padding: 0 20px 25px;
+  padding: 0px 20px 40px 20px;
   border: 1px solid lightgrey;
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 50px;
-  overflow: hidden;
+  height: 60px;
   box-shadow: 2px 2px 2px lightgrey;
+  overflow: hidden;
 }
 .article h2 {
   font-size: 28px;
@@ -84,7 +89,7 @@
   margin: 15px 0 0;
 }
 .article .date {
-  margin: 0;
+  margin: 0 0 40px 0;
   font-size: 14px;
 }
 .article .close {
@@ -95,15 +100,23 @@
 .article .expandButton {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  right: 0;
   font-size: 12px;
-  color: grey;
+  color: #fff;
+  background-color: #000;
   cursor: pointer;
   transform: translate(-50%);
-  background-color: white;
+  border: 1px solid #000;
+  padding: 0.2rem 0.5rem;
 }
 .article-open {
   height: 400px;
+}
+.scroll-effect {
+  overflow: scroll;
+}
+.some-animation {
+  transition: 1s ease;
 }
 html,
 body {

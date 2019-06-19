@@ -4,12 +4,20 @@ class Article {
   constructor(domElement) {
     this.domElement = domElement;
     this.expandButton = domElement.querySelector('.expandButton'); // Grabs '.expandButton' elements
-    this.expandButton.textContent = "expand"; // Adds 'expand' text to btn
+    this.expandButton.textContent = "Expand"; // Adds 'expand' text to btn
     this.expandButton.addEventListener('click', () => this.expandArticle()); // Adds 'click' event to 'expandButton'
   }
 
   expandArticle() { // Toggles '.article-open' on articles
     this.domElement.classList.toggle('article-open');
+    this.domElement.classList.toggle('scroll-effect');
+    this.domElement.classList.toggle('some-animation');
+
+    if (this.expandButton.textContent == "Expand") {
+      this.expandButton.textContent = "Close";
+    } else {
+      this.expandButton.textContent = "Expand";
+    }
   }
 }
 
