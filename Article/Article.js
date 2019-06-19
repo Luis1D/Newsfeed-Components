@@ -6,6 +6,8 @@ class Article {
     this.expandButton = domElement.querySelector('.expandButton'); // Grabs '.expandButton' elements
     this.expandButton.textContent = "Expand"; // Adds 'expand' text to btn
     this.expandButton.addEventListener('click', () => this.expandArticle()); // Adds 'click' event to 'expandButton'
+    this.readButton = domElement.querySelector('.read');
+    this.readButton.addEventListener('click', () => this.readArticle());
   }
 
   expandArticle() { // Toggles '.article-open' on articles
@@ -18,6 +20,9 @@ class Article {
     } else {
       this.expandButton.textContent = "Expand";
     }
+  }
+  readArticle() {
+    this.domElement.style.display = "none";
   }
 }
 

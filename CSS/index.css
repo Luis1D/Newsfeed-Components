@@ -122,19 +122,31 @@
 @keyframes borderColor {
   0% {
     border: 2px solid #ff4848;
+    box-shadow: 0 5px 20px 0px #ff4848;
   }
   25% {
     border: 2px solid #ffb730;
+    box-shadow: 0 5px 20px 0px #ffb730;
   }
   50% {
     border: 2px solid #ff00ff;
+    box-shadow: 0 5px 20px 0px #ff00ff;
   }
   75% {
     border: 2px solid #ff6a83;
+    box-shadow: 0 5px 20px 0px #ff6a83;
   }
   100% {
     border: 2px solid #00b7ff;
+    box-shadow: 0 5px 20px 0px #00b7ff;
   }
+}
+.read {
+  width: 50px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
 }
 html,
 body {
