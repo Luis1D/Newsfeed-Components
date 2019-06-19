@@ -79,14 +79,14 @@
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 60px;
+  height: 70px;
   box-shadow: 2px 2px 2px lightgrey;
   overflow: hidden;
 }
 .article h2 {
   font-size: 28px;
   padding: 0;
-  margin: 15px 0 0;
+  margin: 25px 0 0;
 }
 .article .date {
   margin: 0 0 40px 0;
@@ -99,7 +99,7 @@
 }
 .article .expandButton {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   font-size: 12px;
   color: #fff;
@@ -117,6 +117,24 @@
 }
 .some-animation {
   transition: 1s ease;
+  animation: borderColor 1s ease-in-out infinite alternate;
+}
+@keyframes borderColor {
+  0% {
+    border: 2px solid #ff4848;
+  }
+  25% {
+    border: 2px solid #ffb730;
+  }
+  50% {
+    border: 2px solid #ff00ff;
+  }
+  75% {
+    border: 2px solid #ff6a83;
+  }
+  100% {
+    border: 2px solid #00b7ff;
+  }
 }
 html,
 body {
