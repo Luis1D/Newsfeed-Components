@@ -3,23 +3,23 @@
 }
 .article {
   margin: 20px 10%;
-  padding: 0 20px 25px;
+  padding: 0px 20px 40px 20px;
   border: 1px solid lightgrey;
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 50px;
-  overflow: hidden;
+  height: 70px;
   box-shadow: 2px 2px 2px lightgrey;
+  overflow: hidden;
 
   h2 {
     font-size: 28px;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 25px 0 0;
   }
 
   .date {
-    margin: 0;
+    margin: 0 0 40px 0;
     font-size: 14px;
   }
 
@@ -31,13 +31,15 @@
 
   .expandButton {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    top: 0;
+    right: 0;
     font-size: 12px;
-    color: grey;
+    color: #fff;
+    background-color: #000;
     cursor: pointer;
     transform: translate(-50%);
-    background-color: white;
+    border: 1px solid #000;
+    padding: .2rem .5rem;
   }
 }
 
@@ -45,6 +47,41 @@
   height: 400px;
 }
 
+.scroll-effect {
+  overflow: scroll;
+}
 
+.some-animation {
+  transition: 1s ease;
+  animation: borderColor 1s ease-in-out infinite alternate;
+}
+@keyframes borderColor {
+  0% {
+    border: 2px solid rgb(255, 72, 72);
+    box-shadow: 0 5px 20px 0px rgb(255, 72, 72);
+  }
+  25% {
+    border: 2px solid rgb(255, 183, 48);
+    box-shadow: 0 5px 20px 0px rgb(255, 183, 48);
+  }
+  50% {
+    border: 2px solid rgb(255, 0, 255);
+    box-shadow: 0 5px 20px 0px rgb(255, 0, 255);
+  }
+  75% {
+    border: 2px solid rgb(255, 106, 131);
+    box-shadow: 0 5px 20px 0px rgb(255, 106, 131);
+  }
+  100% {
+    border: 2px solid rgb(0, 183, 255);
+    box-shadow: 0 5px 20px 0px rgb(0, 183, 255);
+  }
+}
 
-
+.read {
+  width: 50px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
