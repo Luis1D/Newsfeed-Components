@@ -89,9 +89,6 @@ const data = [
 ];
 
 
-const article = document.querySelector('.articles');
-
-
 function createArticle(obj) {
 
   // CREATE THE ELEMENTS
