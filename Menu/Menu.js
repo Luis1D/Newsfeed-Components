@@ -12,13 +12,11 @@ let menuItems = [
 function createMenu(array) {
 
   // CREATE ELEMENTS
-  const header = document.querySelector('.header');
   const menu = document.createElement('div');
   const ul = document.createElement('ul');
 
 
   // APPEND ELEMENTS
-  header.appendChild(menu);
   menu.appendChild(ul);
 
   array.forEach(el => {
@@ -32,15 +30,17 @@ function createMenu(array) {
 
   // ADD CLICK EVENT TO MENU BTN
   const menuBtn = document.querySelector('.menu-button');
+
   menuBtn.addEventListener('click', event => {
-    menuBtn.classList.toggle('menu--open');
+    menu.classList.toggle('menu--open');
     console.log('Clicked');
   })
 
   return menu;
 
 }
-createMenu(menuItems);
+const header = document.querySelector('.header');
+header.appendChild(createMenu(menuItems))
 
 
 /* 
