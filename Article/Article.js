@@ -124,15 +124,14 @@ function createArticle(obj) {
   })
 
   // TEXT CONTENT
-  article.textContent = obj.title;
+  articleTitle.textContent = obj.title;
   articleDate.textContent = obj.date;
   paragraphOne.textContent = obj.firstParagraph;
   paragraphTwo.textContent = obj.secondParagraph;
   paragraphThree.textContent = obj.thirdParagraph;
   expandButton.textContent = "Expand";
 
-
-  return article;
+  return articles;
 }
 
 data.map(obj => createArticle(obj));
